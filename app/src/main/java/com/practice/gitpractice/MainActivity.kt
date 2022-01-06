@@ -29,4 +29,24 @@ class MainActivity : AppCompatActivity() {
  * git checkout other-branch-name
  * git switch other-branch-name
  * -> son comandos equivalentes , switch tiene por unica finalidad el cambiar de branch, checkout tiene muchos mas usos
- * **/
+ * */
+
+/**
+ * Renombrar un branch
+ *
+ * git branch -m new-name-branch -> modifica el nombre del current branch (HEAD branch)
+ * git branch -m my-branch-name new-branch-name -> modifica el primer branch mencionado y lo renombra con el segundo parametro dado
+ * "my-branch-name" se renombra a "new-branch-name"
+ * */
+
+
+/**
+ * Para renombrar un branch en un repositorio remoto se elimina el branch remoto y se hace un push de un branch local renombrado
+ * No se puede reombrar un branch remoto directamente
+ *
+ * #First, delete the current old branch
+ * git push origin --delete old-name
+ *
+ * #Then, simply push the new local branch with the correct name
+ * git push -u origin new-name
+ * */
