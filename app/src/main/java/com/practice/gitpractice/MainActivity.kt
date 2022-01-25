@@ -45,8 +45,28 @@ class MainActivity : AppCompatActivity() {
  * No se puede reombrar un branch remoto directamente
  *
  * #First, delete the current old branch
- * git push origin --delete old-name
+ * git push origin --delete old-name -> validar si "origin es correcto"
  *
  * #Then, simply push the new local branch with the correct name
  * git push -u origin new-name
+ *
+ * En realidad, se hace push branch por branch
+ * git push -u origin branch-to-upload
+ *
+ *
+ * OBS -> el flag "-u" indica que se establezca un "tracking connnection" lo cual hace el pushing y el pulling mucho mas facil
+ * (Decidir si conviene o no establecer un tracking connection)
+ *
+ * TRACKING BRANCHES:
+ * Por default, local and remote branches have nothing to do with each other
+ *
+ *
+ * Una vez definidos los tracking connections, no es necesario definir un source branch o un destiny branch,
+ * solo es necesario un git push y un git pull para sincronizar los repositorios locales y remotos.
+ *
+ * Otra ventaja del tracking connection es que se verifican los estados
+ * [ahead X, behind Y] -> indica que se tienen X commtis localmente y no publicados en el repo remoto,
+ * y se tienen Y commits en el branch remoto (correspondientemente conectado) sin que nuestro repo local haya alcanzado los updates
+ *
+ * git branch -v -> verifica los estados de los branch
  * */
