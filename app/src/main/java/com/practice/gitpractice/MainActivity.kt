@@ -22,4 +22,5 @@ class MainActivity : AppCompatActivity() {
         // git reset --hard HEAD~1 : the ~1 says "how many commits yo want o delete back from current HEAD"
         //~ is called "tilde" "option and  +"
     }
-} 
+}
+// fake change
