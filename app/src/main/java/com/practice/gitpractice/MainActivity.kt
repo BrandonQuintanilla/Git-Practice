@@ -16,5 +16,10 @@ class MainActivity : AppCompatActivity() {
 // git cherry-pick <commit-id> : copies the selected commit over our current branch  (on HEAD)
 // git cherry-pick <commit-id1> <commit-id1> <commit-id1> : be can cherypick many commits, but be carefull with the order
 // git cherry-pick <commit-id> -n : -n arguments tells git that not commit the changes, just apply the commit over our current code
+
+
+        // remember, when we  want to delete a commit  we use
+        // git reset --hard HEAD~1 : the ~1 says "how many commits yo want o delete back from current HEAD"
+        //~ is called "tilde" "option and  +"
     }
 } 
